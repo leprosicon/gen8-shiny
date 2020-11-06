@@ -2,7 +2,7 @@
     var SpreadsheetConfig = (function() {
         return {
             // ID of the Google spreadsheet, REQUIRED
-            id: '18GFJkYYqg16dfJpfP-OAbPL87MqNzSUzPdBzEkyDr0s',
+            id: '1wvhasp7zeGunVZviyAtBfJgpQFrncpPTQ98ziv6o74Y',
             // Friend code, optional
             friendCode: 'SW-3161-7488-3807',
             // In-game name, optional
