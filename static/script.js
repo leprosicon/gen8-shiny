@@ -960,7 +960,7 @@ function displayPokemon(){
                 e.stopPropagation();
             });
         } else {
-            $("table .trainer").addClass("hidden");
+   //         $("table .trainer").addClass("hidden");
         }
         $("select:not(#col-picker)").multiselect({
             buttonWidth: '140px',
