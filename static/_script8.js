@@ -404,7 +404,7 @@ function loadPokemon(pokemonData) {
                 var value = tryGetValue(this, [pokeBall, pokeBall+'ball', pokeBall.replace(/é/g, 'e'), pokeBall.replace(/é/g, 'e')+'ball', POKE_BALL_HEADERS[pokeBall]]);
                 if (value) {
                     if (isForUniquePokemon) {
-                        pokemon.pokeBalls.push(value);
+                        pokemon.pokeBalls.push(pokeBall + ' Ball');
                     } else {
                         pokemon.pokeBalls.push(pokeBall + ' Ball');
                     }
@@ -644,7 +644,7 @@ function loadPokemon(pokemonData) {
 // Default values for config stuff
 var spreadsheetId = window.location.search.substring(1) || SpreadsheetConfig.id;
 var worksheetId = 1;
-var isForUniquePokemon = false;
+var isForUniquePokemon = true;
 
 $(document).ready(function() {
     $.getJSON(getWorksheetUrl(spreadsheetId, 1), function(data) {
