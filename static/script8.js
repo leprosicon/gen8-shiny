@@ -404,7 +404,7 @@ function loadPokemon(pokemonData) {
                 var value = tryGetValue(this, [pokeBall, pokeBall+'ball', pokeBall.replace(/é/g, 'e'), pokeBall.replace(/é/g, 'e')+'ball', POKE_BALL_HEADERS[pokeBall]]);
                 if (value) {
                     if (isForUniquePokemon) {
-                        pokemon.pokeBalls.push(value);
+                        pokemon.pokeBalls.push(pokeBall + ' Ball');
                     } else {
                         pokemon.pokeBalls.push(pokeBall + ' Ball');
                     }
@@ -505,8 +505,9 @@ function loadPokemon(pokemonData) {
             row += '<td class="ivs hidden">' + ivs + '</td>';
             row += '<td class="evs hidden">' + evs + '</td>';
             // Moves
-            row += '<td class="moves' +  (pokemon.eggMoves.length > 0 || !isForUniquePokemon ? ' hidden' : '') + '">' + pokemon.moves.join(', ') + '</td>';      
-            row += '<td class="egg-moves' +  (pokemon.eggMoves.length === 0 && isForUniquePokemon ? ' hidden' : '') + '">' + pokemon.eggMoves.join(', ') + '</td>'; 
+              row += '<td class="notes">' + pokemon.notes + '</td>';
+// 		      row += '<td class="moves' +  (pokemon.eggMoves.length > 0 || !isForUniquePokemon ? ' hidden' : '') + '">' + pokemon.moves.join(', ') + '</td>';      
+//            row += '<td class="egg-moves' +  (pokemon.eggMoves.length === 0 && isForUniquePokemon ? ' hidden' : '') + '">' + pokemon.eggMoves.join(', ') + '</td>'; 
             // Poké Balls
             row += '<td class="poke-balls rows' + Math.ceil(pokemon.pokeBalls.length / 3) + '">';
             for (var i = 0; i < pokemon.pokeBalls.length; i++) {
@@ -644,7 +645,7 @@ function loadPokemon(pokemonData) {
 // Default values for config stuff
 var spreadsheetId = window.location.search.substring(1) || SpreadsheetConfig.id;
 var worksheetId = 1;
-var isForUniquePokemon = false;
+var isForUniquePokemon = true;
 
 $(document).ready(function() {
     $.getJSON(getWorksheetUrl(spreadsheetId, 1), function(data) {
