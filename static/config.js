@@ -2,7 +2,7 @@
 // ID of the Google spreadsheet
 // ***********************************************************************************
 // Make sure your spreadsheet is published (File > Publish to the web…)
-var spreadsheetId = "18GFJkYYqg16dfJpfP-OAbPL87MqNzSUzPdBzEkyDr0s";
+var spreadsheetId = "1wvhasp7zeGunVZviyAtBfJgpQFrncpPTQ98ziv6o74Y";
 
 // ***********************************************************************************
 // Your FC and IGN
