@@ -605,7 +605,7 @@ function loadPokemon(pokemonData) {
             $( 'th.ivs' ).append(' / <abbr title="Effort Values">EVs</abbr>');
             $( 'th.egg-moves' ).text( 'Moves' );
         } else {
-            $( 'table .trainer' ).addClass( 'hidden' );
+   //         $( 'table .trainer' ).addClass( 'hidden' );
         }
         
         // Create filters
